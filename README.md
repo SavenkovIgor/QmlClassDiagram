@@ -15,6 +15,8 @@ classDef QtStyle fill:#41cd52,stroke-width:0px,color:#121212;
 classDef QtStyleQuick fill:#41cd52,stroke-width:0px,color:#121212;
 classDef QtStyleQuickControls fill:#41cd52,stroke-width:0px,color:#121212;
 
+subgraph RL Primitives[Primitive types]
+direction RL
 QVT(Value types):::CommentStyle
 QLT(Language types):::CommentStyle
 QMT(Module types):::CommentStyle
@@ -42,15 +44,40 @@ size:::QtStyle
 vector2d:::QtStyle
 vector3d:::QtStyle
 vector4d:::QtStyle
+end
+
+subgraph RL AnimationGroup[Animation]
+direction RL
+AnchorAnimation:::QtStyleQuick
+Animation:::QtStyleQuick
+Animator:::QtStyleQuick
+ColorAnimation:::QtStyleQuick
+ParallelAnimation:::QtStyleQuick
+ParentAnimation:::QtStyleQuick
+PathAnimation:::QtStyleQuick
+PauseAnimation:::QtStyleQuick
+PropertyAction:::QtStyleQuick
+SequentialAnimation:::QtStyleQuick
+ScriptAction:::QtStyleQuick
+PropertyAnimation:::QtStyleQuick
+OpacityAnimator:::QtStyleQuick
+ScaleAnimator:::QtStyleQuick
+RotationAnimator:::QtStyleQuick
+UniformAnimator:::QtStyleQuick
+XAnimator:::QtStyleQuick
+YAnimator:::QtStyleQuick
+NumberAnimation:::QtStyleQuick
+SmoothedAnimation:::QtStyleQuick
+SpringAnimation:::QtStyleQuick
+RotationAnimation:::QtStyleQuick
+Vector3dAnimation:::QtStyleQuick
+end
 
 Accessible:::QtStyleQuick
-AnchorAnimation:::QtStyleQuick
 AnchorChanges:::QtStyleQuick
 AnimatedImage:::QtStyleQuick
 AnimatedSprite:::QtStyleQuick
-Animation:::QtStyleQuick
 AnimationController:::QtStyleQuick
-Animator:::QtStyleQuick
 Application:::QtStyleQuick
 Behavior:::QtStyleQuick
 BorderImage:::QtStyleQuick
@@ -60,7 +87,6 @@ CanvasGradient:::QtStyleQuick
 CanvasImageData:::QtStyleQuick
 CanvasPixelArray:::QtStyleQuick
 CloseEvent:::QtStyleQuick
-ColorAnimation:::QtStyleQuick
 ColorGroup:::QtStyleQuick
 Column:::QtStyleQuick
 Context2D:::QtStyleQuick
@@ -101,15 +127,10 @@ MouseArea:::QtStyleQuick
 MouseEvent:::QtStyleQuick
 MultiPointHandler:::QtStyleQuick
 MultiPointTouchArea:::QtStyleQuick
-NumberAnimation:::QtStyleQuick
-OpacityAnimator:::QtStyleQuick
 Palette:::QtStyleQuick
-ParallelAnimation:::QtStyleQuick
-ParentAnimation:::QtStyleQuick
 ParentChange:::QtStyleQuick
 Path:::QtStyleQuick
 PathAngleArc:::QtStyleQuick
-PathAnimation:::QtStyleQuick
 PathArc:::QtStyleQuick
 PathAttribute:::QtStyleQuick
 PathCubic:::QtStyleQuick
@@ -125,7 +146,6 @@ PathQuad:::QtStyleQuick
 PathSvg:::QtStyleQuick
 PathText:::QtStyleQuick
 PathView:::QtStyleQuick
-PauseAnimation:::QtStyleQuick
 PinchArea:::QtStyleQuick
 PinchEvent:::QtStyleQuick
 PinchHandler:::QtStyleQuick
@@ -135,27 +155,18 @@ PointerDeviceHandler:::QtStyleQuick
 PointerEvent:::QtStyleQuick
 PointerHandler:::QtStyleQuick
 Positioner:::QtStyleQuick
-PropertyAction:::QtStyleQuick
-PropertyAnimation:::QtStyleQuick
 PropertyChanges:::QtStyleQuick
 Rectangle:::QtStyleQuick
 RegularExpressionValidator:::QtStyleQuick
 Repeater:::QtStyleQuick
 Rotation:::QtStyleQuick
-RotationAnimation:::QtStyleQuick
-RotationAnimator:::QtStyleQuick
 Row:::QtStyleQuick
 Scale:::QtStyleQuick
-ScaleAnimator:::QtStyleQuick
 Screen:::QtStyleQuick
-ScriptAction:::QtStyleQuick
-SequentialAnimation:::QtStyleQuick
 ShaderEffect:::QtStyleQuick
 ShaderEffectSource:::QtStyleQuick
 Shortcut:::QtStyleQuick
 SinglePointHandler:::QtStyleQuick
-SmoothedAnimation:::QtStyleQuick
-SpringAnimation:::QtStyleQuick
 Sprite:::QtStyleQuick
 SpriteSequence:::QtStyleQuick
 State:::QtStyleQuick
@@ -173,14 +184,10 @@ Transform:::QtStyleQuick
 Transition:::QtStyleQuick
 Translate:::QtStyleQuick
 TreeView:::QtStyleQuick
-UniformAnimator:::QtStyleQuick
-Vector3dAnimation:::QtStyleQuick
 ViewTransition:::QtStyleQuick
 WheelEvent:::QtStyleQuick
 WheelHandler:::QtStyleQuick
 Window:::QtStyleQuick
-XAnimator:::QtStyleQuick
-YAnimator:::QtStyleQuick
 eventPoint:::QtStyleQuick
 handlerPoint:::QtStyleQuick
 pointingDeviceUniqueId:::QtStyleQuick
