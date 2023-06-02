@@ -11,9 +11,10 @@ title: QML Type Hierarchy
 ---
 graph RL
 classDef CommentStyle fill:#1e1e1e,stroke-width:0px,color:#e3e3e4;
-classDef QtStyle fill:#41cd52,stroke-width:0px,color:#121212;
+classDef QtStyle fill:#fbf2c4,stroke-width:0px,color:#111010,border-radius: 10px;
 classDef QtStyleQuick fill:#41cd52,stroke-width:0px,color:#121212;
-classDef QtStyleQuickControls fill:#41cd52,stroke-width:0px,color:#121212;
+classDef QtStyleQuickControls fill:#008585,stroke-width:0px,color:#121212;
+classDef QtStyleQuickLayouts fill:#008585,stroke-width:0px,color:#121212;
 
 subgraph RL Primitives[Primitive types]
 direction RL
@@ -46,11 +47,12 @@ vector3d:::QtStyle
 vector4d:::QtStyle
 end
 
-subgraph RL AnimationGroup[Animation]
+subgraph AnimationGroup[Animation]
 direction RL
 AnchorAnimation:::QtStyleQuick
-Animation:::QtStyleQuick
+Animation(Animation):::QtStyleQuick
 Animator:::QtStyleQuick
+AnimationController:::QtStyleQuick
 ColorAnimation:::QtStyleQuick
 ParallelAnimation:::QtStyleQuick
 ParentAnimation:::QtStyleQuick
@@ -73,11 +75,86 @@ RotationAnimation:::QtStyleQuick
 Vector3dAnimation:::QtStyleQuick
 end
 
+subgraph Layouts[Layouting stuff]
+direction RL
+Column:::QtStyleQuick
+Row:::QtStyleQuick
+Flow:::QtStyleQuick
+ColumnLayout:::QtStyleQuickLayouts
+TableView:::QtStyleQuick
+GridLayout:::QtStyleQuickLayouts
+Layout:::QtStyleQuickLayouts
+RowLayout:::QtStyleQuickLayouts
+StackLayout:::QtStyleQuickLayouts
+Grid:::QtStyleQuick
+GridView:::QtStyleQuick
+ListView:::QtStyleQuick
+Flickable:::QtStyleQuick
+end
+
+subgraph Input[Input methods]
+direction RL
+DragHandler:::QtStyleQuick
+Drag:::QtStyleQuick
+DropArea:::QtStyleQuick
+EnterKey:::QtStyleQuick
+MultiPointHandler:::QtStyleQuick
+MultiPointTouchArea:::QtStyleQuick
+HoverHandler:::QtStyleQuick
+InputMethod:::QtStyleQuick
+TapHandler:::QtStyleQuick
+PinchHandler:::QtStyleQuick
+PointerHandler:::QtStyleQuick
+KeyNavigation:::QtStyleQuick
+TextArea:::QtStyleQuickControls
+TextField:::QtStyleQuickControls
+Keys:::QtStyleQuick
+PointerDeviceHandler:::QtStyleQuick
+PinchArea:::QtStyleQuick
+TextInput:::QtStyleQuick
+SinglePointHandler:::QtStyleQuick
+PointHandler:::QtStyleQuick
+WheelHandler:::QtStyleQuick
+end
+
+subgraph Shapes
+direction RL
+PathCubic:::QtStyleQuick
+PathCurve:::QtStyleQuick
+PathQuad:::QtStyleQuick
+PathSvg:::QtStyleQuick
+PathText:::QtStyleQuick
+PathLine:::QtStyleQuick
+Path:::QtStyleQuick
+end
+
+subgraph Navigation
+direction RL
+Flipable:::QtStyleQuick
+StackView:::QtStyleQuickControls
+end
+
+subgraph Events
+direction RL
+CloseEvent:::QtStyleQuick
+DragEvent:::QtStyleQuick
+GestureEvent:::QtStyleQuick
+KeyEvent:::QtStyleQuick
+PinchEvent:::QtStyleQuick
+PointerEvent:::QtStyleQuick
+end
+
+subgraph Transforms[Transform]
+direction RL
+Rotation:::QtStyleQuick
+Scale:::QtStyleQuick
+Translate:::QtStyleQuick
+end
+
 Accessible:::QtStyleQuick
 AnchorChanges:::QtStyleQuick
 AnimatedImage:::QtStyleQuick
 AnimatedSprite:::QtStyleQuick
-AnimationController:::QtStyleQuick
 Application:::QtStyleQuick
 Behavior:::QtStyleQuick
 BorderImage:::QtStyleQuick
@@ -86,111 +163,68 @@ Canvas:::QtStyleQuick
 CanvasGradient:::QtStyleQuick
 CanvasImageData:::QtStyleQuick
 CanvasPixelArray:::QtStyleQuick
-CloseEvent:::QtStyleQuick
 ColorGroup:::QtStyleQuick
-Column:::QtStyleQuick
 Context2D:::QtStyleQuick
 DoubleValidator:::QtStyleQuick
-Drag:::QtStyleQuick
-DragEvent:::QtStyleQuick
-DragHandler:::QtStyleQuick
-DropArea:::QtStyleQuick
-EnterKey:::QtStyleQuick
-Flickable:::QtStyleQuick
-Flipable:::QtStyleQuick
-Flow:::QtStyleQuick
 FocusScope:::QtStyleQuick
 FontLoader:::QtStyleQuick
 FontMetrics:::QtStyleQuick
 FrameAnimation:::QtStyleQuick
-GestureEvent:::QtStyleQuick
 Gradient:::QtStyleQuick
 GradientStop:::QtStyleQuick
 GraphicsInfo:::QtStyleQuick
-Grid:::QtStyleQuick
 GridMesh:::QtStyleQuick
-GridView:::QtStyleQuick
-HoverHandler:::QtStyleQuick
 Image:::QtStyleQuick
-InputMethod:::QtStyleQuick
 IntValidator:::QtStyleQuick
 Item:::QtStyleQuick
 ItemGrabResult:::QtStyleQuick
-KeyEvent:::QtStyleQuick
-KeyNavigation:::QtStyleQuick
-Keys:::QtStyleQuick
 LayoutMirroring:::QtStyleQuick
-ListView:::QtStyleQuick
 Loader:::QtStyleQuick
 Matrix4x4:::QtStyleQuick
 MouseArea:::QtStyleQuick
 MouseEvent:::QtStyleQuick
-MultiPointHandler:::QtStyleQuick
-MultiPointTouchArea:::QtStyleQuick
 Palette:::QtStyleQuick
 ParentChange:::QtStyleQuick
-Path:::QtStyleQuick
 PathAngleArc:::QtStyleQuick
 PathArc:::QtStyleQuick
 PathAttribute:::QtStyleQuick
-PathCubic:::QtStyleQuick
-PathCurve:::QtStyleQuick
 PathElement:::QtStyleQuick
 PathInterpolator:::QtStyleQuick
-PathLine:::QtStyleQuick
 PathMove:::QtStyleQuick
 PathMultiline:::QtStyleQuick
 PathPercent:::QtStyleQuick
 PathPolyline:::QtStyleQuick
-PathQuad:::QtStyleQuick
-PathSvg:::QtStyleQuick
-PathText:::QtStyleQuick
 PathView:::QtStyleQuick
-PinchArea:::QtStyleQuick
-PinchEvent:::QtStyleQuick
-PinchHandler:::QtStyleQuick
-PointHandler:::QtStyleQuick
 PointerDevice:::QtStyleQuick
-PointerDeviceHandler:::QtStyleQuick
-PointerEvent:::QtStyleQuick
-PointerHandler:::QtStyleQuick
 Positioner:::QtStyleQuick
 PropertyChanges:::QtStyleQuick
 Rectangle:::QtStyleQuick
 RegularExpressionValidator:::QtStyleQuick
 Repeater:::QtStyleQuick
-Rotation:::QtStyleQuick
-Row:::QtStyleQuick
-Scale:::QtStyleQuick
 Screen:::QtStyleQuick
 ShaderEffect:::QtStyleQuick
 ShaderEffectSource:::QtStyleQuick
 Shortcut:::QtStyleQuick
-SinglePointHandler:::QtStyleQuick
 Sprite:::QtStyleQuick
 SpriteSequence:::QtStyleQuick
 State:::QtStyleQuick
 StateChangeScript:::QtStyleQuick
 StateGroup:::QtStyleQuick
 SystemPalette:::QtStyleQuick
-TableView:::QtStyleQuick
-TapHandler:::QtStyleQuick
 Text:::QtStyleQuick
 TextEdit:::QtStyleQuick
-TextInput:::QtStyleQuick
 TextMetrics:::QtStyleQuick
 TouchPoint:::QtStyleQuick
 Transform:::QtStyleQuick
 Transition:::QtStyleQuick
-Translate:::QtStyleQuick
 TreeView:::QtStyleQuick
 ViewTransition:::QtStyleQuick
-WheelEvent:::QtStyleQuick
-WheelHandler:::QtStyleQuick
+WheelEvent:::QtStyleQuick\
 Window:::QtStyleQuick
 eventPoint:::QtStyleQuick
 handlerPoint:::QtStyleQuick
 pointingDeviceUniqueId:::QtStyleQuick
+
 
 AbstractButton:::QtStyleQuickControls
 Action:::QtStyleQuickControls
@@ -241,15 +275,12 @@ Slider:::QtStyleQuickControls
 SpinBox:::QtStyleQuickControls
 SplitHandle:::QtStyleQuickControls
 SplitView:::QtStyleQuickControls
-StackView:::QtStyleQuickControls
 SwipeDelegate:::QtStyleQuickControls
 SwipeView:::QtStyleQuickControls
 Switch:::QtStyleQuickControls
 SwitchDelegate:::QtStyleQuickControls
 TabBar:::QtStyleQuickControls
 TabButton:::QtStyleQuickControls
-TextArea:::QtStyleQuickControls
-TextField:::QtStyleQuickControls
 ToolBar:::QtStyleQuickControls
 ToolButton:::QtStyleQuickControls
 ToolSeparator:::QtStyleQuickControls
@@ -426,6 +457,12 @@ Window --> QQuickWindow
 QQuickWindow --> QtObject
 XAnimator --> Animator
 YAnimator --> Animator
+
+ColumnLayout --> Item
+GridLayout --> Item
+Layout --> QtObject
+RowLayout --> Item
+StackLayout --> Item
 
 AbstractButton --> Control
 Action --> QtObject
