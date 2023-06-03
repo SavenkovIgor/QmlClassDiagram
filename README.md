@@ -7,17 +7,12 @@ Just Qml types dependency diagram build based on Qt 6.5 documentation
 
 ```mermaid
 ---
-title: QML Type Hierarchy
+title: QML Primitive types
 ---
-graph RL
+graph BT
 classDef CommentStyle fill:#1e1e1e,stroke-width:0px,color:#e3e3e4;
 classDef QtStyle fill:#fbf2c4,stroke-width:0px,color:#111010,border-radius: 10px;
-classDef QtStyleQuick fill:#41cd52,stroke-width:0px,color:#121212;
-classDef QtStyleQuickControls fill:#008585,stroke-width:0px,color:#121212;
-classDef QtStyleQuickLayouts fill:#008585,stroke-width:0px,color:#121212;
 
-subgraph RL Primitives[Primitive types]
-direction RL
 QVT(Value types):::CommentStyle
 QLT(Language types):::CommentStyle
 QMT(Module types):::CommentStyle
@@ -45,251 +40,6 @@ size:::QtStyle
 vector2d:::QtStyle
 vector3d:::QtStyle
 vector4d:::QtStyle
-end
-
-subgraph AnimationGroup[Animation]
-direction RL
-AnchorAnimation:::QtStyleQuick
-Animation(Animation):::QtStyleQuick
-Animator:::QtStyleQuick
-AnimationController:::QtStyleQuick
-ColorAnimation:::QtStyleQuick
-ParallelAnimation:::QtStyleQuick
-ParentAnimation:::QtStyleQuick
-PathAnimation:::QtStyleQuick
-PauseAnimation:::QtStyleQuick
-PropertyAction:::QtStyleQuick
-SequentialAnimation:::QtStyleQuick
-ScriptAction:::QtStyleQuick
-FrameAnimation:::QtStyleQuick
-PropertyAnimation:::QtStyleQuick
-OpacityAnimator:::QtStyleQuick
-ScaleAnimator:::QtStyleQuick
-RotationAnimator:::QtStyleQuick
-UniformAnimator:::QtStyleQuick
-XAnimator:::QtStyleQuick
-YAnimator:::QtStyleQuick
-NumberAnimation:::QtStyleQuick
-SmoothedAnimation:::QtStyleQuick
-SpringAnimation:::QtStyleQuick
-RotationAnimation:::QtStyleQuick
-Vector3dAnimation:::QtStyleQuick
-end
-
-subgraph Layouts[Layouting stuff]
-direction RL
-Column:::QtStyleQuick
-Row:::QtStyleQuick
-Flow:::QtStyleQuick
-ColumnLayout:::QtStyleQuickLayouts
-LayoutMirroring:::QtStyleQuick
-TableView:::QtStyleQuick
-Positioner:::QtStyleQuick
-GridLayout:::QtStyleQuickLayouts
-Layout:::QtStyleQuickLayouts
-RowLayout:::QtStyleQuickLayouts
-StackLayout:::QtStyleQuickLayouts
-Grid:::QtStyleQuick
-GridView:::QtStyleQuick
-ListView:::QtStyleQuick
-Flickable:::QtStyleQuick
-TreeView:::QtStyleQuick
-end
-
-subgraph Input[Input methods]
-direction RL
-DragHandler:::QtStyleQuick
-Drag:::QtStyleQuick
-DropArea:::QtStyleQuick
-EnterKey:::QtStyleQuick
-MultiPointHandler:::QtStyleQuick
-MultiPointTouchArea:::QtStyleQuick
-PointerDevice:::QtStyleQuick
-HoverHandler:::QtStyleQuick
-TouchPoint:::QtStyleQuick
-InputMethod:::QtStyleQuick
-TapHandler:::QtStyleQuick
-PinchHandler:::QtStyleQuick
-PointerHandler:::QtStyleQuick
-MouseArea:::QtStyleQuick
-KeyNavigation:::QtStyleQuick
-TextArea:::QtStyleQuickControls
-TextField:::QtStyleQuickControls
-Keys:::QtStyleQuick
-PointerDeviceHandler:::QtStyleQuick
-PinchArea:::QtStyleQuick
-TextInput:::QtStyleQuick
-SinglePointHandler:::QtStyleQuick
-PointHandler:::QtStyleQuick
-WheelHandler:::QtStyleQuick
-end
-
-subgraph Shapes
-direction RL
-PathCubic:::QtStyleQuick
-PathCurve:::QtStyleQuick
-PathQuad:::QtStyleQuick
-PathSvg:::QtStyleQuick
-PathAttribute:::QtStyleQuick
-PathElement:::QtStyleQuick
-PathInterpolator:::QtStyleQuick
-PathMove:::QtStyleQuick
-PathMultiline:::QtStyleQuick
-PathPercent:::QtStyleQuick
-PathPolyline:::QtStyleQuick
-PathView:::QtStyleQuick
-PathAngleArc:::QtStyleQuick
-PathArc:::QtStyleQuick
-PathText:::QtStyleQuick
-PathLine:::QtStyleQuick
-Path:::QtStyleQuick
-end
-
-subgraph Navigation
-direction RL
-Flipable:::QtStyleQuick
-StackView:::QtStyleQuickControls
-end
-
-subgraph Events
-direction RL
-CloseEvent:::QtStyleQuick
-DragEvent:::QtStyleQuick
-WheelEvent:::QtStyleQuick
-GestureEvent:::QtStyleQuick
-KeyEvent:::QtStyleQuick
-MouseEvent:::QtStyleQuick
-PinchEvent:::QtStyleQuick
-PointerEvent:::QtStyleQuick
-end
-
-subgraph Transforms[Transform]
-direction RL
-Rotation:::QtStyleQuick
-Scale:::QtStyleQuick
-Translate:::QtStyleQuick
-Matrix4x4:::QtStyleQuick
-Transform:::QtStyleQuick
-end
-
-Accessible:::QtStyleQuick
-AnchorChanges:::QtStyleQuick
-AnimatedImage:::QtStyleQuick
-AnimatedSprite:::QtStyleQuick
-Application:::QtStyleQuick
-Behavior:::QtStyleQuick
-BorderImage:::QtStyleQuick
-BorderImageMesh:::QtStyleQuick
-Canvas:::QtStyleQuick
-CanvasGradient:::QtStyleQuick
-CanvasImageData:::QtStyleQuick
-CanvasPixelArray:::QtStyleQuick
-ColorGroup:::QtStyleQuick
-Context2D:::QtStyleQuick
-DoubleValidator:::QtStyleQuick
-FocusScope:::QtStyleQuick
-FontLoader:::QtStyleQuick
-FontMetrics:::QtStyleQuick
-Gradient:::QtStyleQuick
-GradientStop:::QtStyleQuick
-GraphicsInfo:::QtStyleQuick
-GridMesh:::QtStyleQuick
-Image:::QtStyleQuick
-IntValidator:::QtStyleQuick
-Item:::QtStyleQuick
-ItemGrabResult:::QtStyleQuick
-Loader:::QtStyleQuick
-Palette:::QtStyleQuick
-ParentChange:::QtStyleQuick
-PropertyChanges:::QtStyleQuick
-Rectangle:::QtStyleQuick
-RegularExpressionValidator:::QtStyleQuick
-Repeater:::QtStyleQuick
-Screen:::QtStyleQuick
-ShaderEffect:::QtStyleQuick
-ShaderEffectSource:::QtStyleQuick
-Shortcut:::QtStyleQuick
-Sprite:::QtStyleQuick
-SpriteSequence:::QtStyleQuick
-State:::QtStyleQuick
-StateChangeScript:::QtStyleQuick
-StateGroup:::QtStyleQuick
-SystemPalette:::QtStyleQuick
-Text:::QtStyleQuick
-TextEdit:::QtStyleQuick
-TextMetrics:::QtStyleQuick
-Transition:::QtStyleQuick
-ViewTransition:::QtStyleQuick
-Window:::QtStyleQuick
-eventPoint:::QtStyleQuick
-handlerPoint:::QtStyleQuick
-pointingDeviceUniqueId:::QtStyleQuick
-
-
-AbstractButton:::QtStyleQuickControls
-Action:::QtStyleQuickControls
-ActionGroup:::QtStyleQuickControls
-ApplicationWindow:::QtStyleQuickControls
-BusyIndicator:::QtStyleQuickControls
-Button:::QtStyleQuickControls
-ButtonGroup:::QtStyleQuickControls
-Calendar:::QtStyleQuickControls
-CalendarModel:::QtStyleQuickControls
-CheckBox:::QtStyleQuickControls
-CheckDelegate:::QtStyleQuickControls
-ComboBox:::QtStyleQuickControls
-Container:::QtStyleQuickControls
-Control:::QtStyleQuickControls
-DayOfWeekRow:::QtStyleQuickControls
-DelayButton:::QtStyleQuickControls
-Dial:::QtStyleQuickControls
-Dialog:::QtStyleQuickControls
-DialogButtonBox:::QtStyleQuickControls
-Drawer:::QtStyleQuickControls
-Frame:::QtStyleQuickControls
-GroupBox:::QtStyleQuickControls
-HorizontalHeaderView:::QtStyleQuickControls
-ItemDelegate:::QtStyleQuickControls
-Label:::QtStyleQuickControls
-Menu:::QtStyleQuickControls
-MenuBar:::QtStyleQuickControls
-MenuBarItem:::QtStyleQuickControls
-MenuItem:::QtStyleQuickControls
-MenuSeparator:::QtStyleQuickControls
-MonthGrid:::QtStyleQuickControls
-Overlay:::QtStyleQuickControls
-Page:::QtStyleQuickControls
-PageIndicator:::QtStyleQuickControls
-Pane:::QtStyleQuickControls
-Popup:::QtStyleQuickControls
-ProgressBar:::QtStyleQuickControls
-RadioButton:::QtStyleQuickControls
-RadioDelegate:::QtStyleQuickControls
-RangeSlider:::QtStyleQuickControls
-RoundButton:::QtStyleQuickControls
-ScrollBar:::QtStyleQuickControls
-ScrollIndicator:::QtStyleQuickControls
-ScrollView:::QtStyleQuickControls
-SelectionRectangle:::QtStyleQuickControls
-Slider:::QtStyleQuickControls
-SpinBox:::QtStyleQuickControls
-SplitHandle:::QtStyleQuickControls
-SplitView:::QtStyleQuickControls
-SwipeDelegate:::QtStyleQuickControls
-SwipeView:::QtStyleQuickControls
-Switch:::QtStyleQuickControls
-SwitchDelegate:::QtStyleQuickControls
-TabBar:::QtStyleQuickControls
-TabButton:::QtStyleQuickControls
-ToolBar:::QtStyleQuickControls
-ToolButton:::QtStyleQuickControls
-ToolSeparator:::QtStyleQuickControls
-ToolTip:::QtStyleQuickControls
-TreeViewDelegate:::QtStyleQuickControls
-Tumbler:::QtStyleQuickControls
-VerticalHeaderView:::QtStyleQuickControls
-WeekNumberColumn:::QtStyleQuickControls
-
 
 QLT --> QVT
 QMT --> QVT
@@ -317,104 +67,442 @@ size --> QMT
 vector2d --> QMT
 vector3d --> QMT
 vector4d --> QMT
+```
 
-Accessible --> QtObject
+```mermaid
+---
+title: QML Type Hierarchy
+---
+graph RL
+classDef CommentStyle fill:#1e1e1e,stroke-width:0px,color:#e3e3e4;
+classDef QtStyleQuick fill:#41cd52,stroke-width:0px,color:#121212;
+classDef QtStyleQuickControls fill:#008585,stroke-width:0px,color:#121212;
+classDef QtStyleQuickLayouts fill:#008585,stroke-width:0px,color:#121212;
+
+
+Item:::QtStyleQuick
+Control:::QtStyleQuickControls
+
+subgraph RootAppComponents[Root application components]
+direction RL
+Application:::QtStyleQuick
+ApplicationWindow:::QtStyleQuickControls
+Window:::QtStyleQuick
+end
+
+subgraph AnimationGroup[Animation]
+direction RL
+AnchorAnimation:::QtStyleQuick
+Animation(Animation):::QtStyleQuick
+Animator:::QtStyleQuick
+AnimationController:::QtStyleQuick
+ParallelAnimation:::QtStyleQuick
+ParentAnimation:::QtStyleQuick
+PathAnimation:::QtStyleQuick
+PauseAnimation:::QtStyleQuick
+PropertyAction:::QtStyleQuick
+SequentialAnimation:::QtStyleQuick
+ScriptAction:::QtStyleQuick
+FrameAnimation:::QtStyleQuick
+PropertyAnimation:::QtStyleQuick
+OpacityAnimator:::QtStyleQuick
+ScaleAnimator:::QtStyleQuick
+RotationAnimator:::QtStyleQuick
+UniformAnimator:::QtStyleQuick
+XAnimator:::QtStyleQuick
+YAnimator:::QtStyleQuick
+NumberAnimation:::QtStyleQuick
+ColorAnimation:::QtStyleQuick
+RotationAnimation:::QtStyleQuick
+Vector3dAnimation:::QtStyleQuick
+SmoothedAnimation:::QtStyleQuick
+SpringAnimation:::QtStyleQuick
+Transition:::QtStyleQuick
+ViewTransition:::QtStyleQuick
+end
+
+subgraph Popups
+direction RL
+Popup:::QtStyleQuickControls
+Dialog:::QtStyleQuickControls
+Drawer:::QtStyleQuickControls
+Menu:::QtStyleQuickControls
+ToolTip:::QtStyleQuickControls
+Overlay:::QtStyleQuickControls
+end
+
+subgraph Positioning[Positioning, Layouting, Navigation]
+direction RL
+Container:::QtStyleQuickControls
+Flickable:::QtStyleQuick
+
+subgraph ComponentLayouts[Component-level layouts]
+direction RL
+Row:::QtStyleQuick
+RowLayout:::QtStyleQuickLayouts
+Column:::QtStyleQuick
+ColumnLayout:::QtStyleQuickLayouts
+Grid:::QtStyleQuick
+GridLayout:::QtStyleQuickLayouts
+Flow:::QtStyleQuick
+StackLayout:::QtStyleQuickLayouts
+end
+
+subgraph AppLayouting[App-level layouts]
+direction RL
+Pane:::QtStyleQuickControls
+Frame:::QtStyleQuickControls
+Page:::QtStyleQuickControls
+ToolBar:::QtStyleQuickControls
+ScrollView:::QtStyleQuickControls
+SplitView:::QtStyleQuickControls
+TabBar:::QtStyleQuickControls
+MenuBar:::QtStyleQuickControls
+ButtonGroup:::QtStyleQuickControls
+DialogButtonBox:::QtStyleQuickControls
+GroupBox:::QtStyleQuickControls
+end
+
+subgraph DynLayouts[Data-driven layouts]
+direction RL
+ListView:::QtStyleQuick
+GridView:::QtStyleQuick
+TableView:::QtStyleQuick
+TreeView:::QtStyleQuick
+HorizontalHeaderView:::QtStyleQuickControls
+VerticalHeaderView:::QtStyleQuickControls
+end
+
+subgraph Navigators[Navigating layouts]
+direction RL
+SwipeView:::QtStyleQuickControls
+StackView:::QtStyleQuickControls
+Flipable:::QtStyleQuick
+end
+
+subgraph LayoutHelpers[Layout Helpers]
+direction RL
+Layout:::QtStyleQuickLayouts
+LayoutMirroring:::QtStyleQuick
+Positioner:::QtStyleQuick
+SplitHandle:::QtStyleQuickControls
+end
+
+end
+
+subgraph Input[Input methods]
+direction RL
+DragHandler:::QtStyleQuick
+Drag:::QtStyleQuick
+DropArea:::QtStyleQuick
+MultiPointTouchArea:::QtStyleQuick
+PointerDevice:::QtStyleQuick
+TouchPoint:::QtStyleQuick
+PinchHandler:::QtStyleQuick
+PointerHandler:::QtStyleQuick
+MouseArea:::QtStyleQuick
+MultiPointHandler:::QtStyleQuick
+PointerDeviceHandler:::QtStyleQuick
+PinchArea:::QtStyleQuick
+pointingDeviceUniqueId:::QtStyleQuick
+SinglePointHandler:::QtStyleQuick
+HoverHandler:::QtStyleQuick
+TapHandler:::QtStyleQuick
+PointHandler:::QtStyleQuick
+WheelHandler:::QtStyleQuick
+
+subgraph SpceificInput[Specific ui inputs]
+direction RL
+SpinBox:::QtStyleQuickControls
+Tumbler:::QtStyleQuickControls
+Slider:::QtStyleQuickControls
+Dial:::QtStyleQuickControls
+RangeSlider:::QtStyleQuickControls
+ComboBox:::QtStyleQuickControls
+end
+
+subgraph ButtonContainer[Buttons]
+direction RL
+AbstractButton:::QtStyleQuickControls
+Button:::QtStyleQuickControls
+CheckBox:::QtStyleQuickControls
+DelayButton:::QtStyleQuickControls
+MenuItem:::QtStyleQuickControls
+TabButton:::QtStyleQuickControls
+RoundButton:::QtStyleQuickControls
+ToolButton:::QtStyleQuickControls
+Switch:::QtStyleQuickControls
+RadioButton:::QtStyleQuickControls
+MenuBarItem:::QtStyleQuickControls
+
+subgraph Delegates
+direction RL
+ItemDelegate:::QtStyleQuickControls
+CheckDelegate:::QtStyleQuickControls
+RadioDelegate:::QtStyleQuickControls
+SwipeDelegate:::QtStyleQuickControls
+SwitchDelegate:::QtStyleQuickControls
+TreeViewDelegate:::QtStyleQuickControls
+end
+
+end
+
+subgraph KeysGroup[Keys]
+direction RL
+Keys:::QtStyleQuick
+KeyNavigation:::QtStyleQuick
+Shortcut:::QtStyleQuick
+end
+
+subgraph TextGroup[Text]
+direction RL
+InputMethod:::QtStyleQuick
+EnterKey:::QtStyleQuick
+TextEdit:::QtStyleQuick
+TextArea:::QtStyleQuickControls
+TextField:::QtStyleQuickControls
+TextInput:::QtStyleQuick
+end
+
+end
+
+subgraph Shapes
+direction RL
+PathCubic:::QtStyleQuick
+PathCurve:::QtStyleQuick
+PathQuad:::QtStyleQuick
+PathSvg:::QtStyleQuick
+PathAttribute:::QtStyleQuick
+PathElement:::QtStyleQuick
+PathInterpolator:::QtStyleQuick
+PathMove:::QtStyleQuick
+PathMultiline:::QtStyleQuick
+PathPercent:::QtStyleQuick
+PathPolyline:::QtStyleQuick
+PathView:::QtStyleQuick
+PathAngleArc:::QtStyleQuick
+PathArc:::QtStyleQuick
+PathText:::QtStyleQuick
+PathLine:::QtStyleQuick
+Path:::QtStyleQuick
+end
+
+subgraph Events
+direction RL
+CloseEvent:::QtStyleQuick
+DragEvent:::QtStyleQuick
+WheelEvent:::QtStyleQuick
+GestureEvent:::QtStyleQuick
+KeyEvent:::QtStyleQuick
+MouseEvent:::QtStyleQuick
+PinchEvent:::QtStyleQuick
+PointerEvent:::QtStyleQuick
+eventPoint:::QtStyleQuick
+handlerPoint:::QtStyleQuick
+end
+
+subgraph Transforms[Transform]
+direction RL
+Transform:::QtStyleQuick
+Rotation:::QtStyleQuick
+Scale:::QtStyleQuick
+Translate:::QtStyleQuick
+Matrix4x4:::QtStyleQuick
+end
+
+subgraph Builders
+direction RL
+Loader:::QtStyleQuick
+Repeater:::QtStyleQuick
+end
+
+subgraph Validators
+direction RL
+DoubleValidator:::QtStyleQuick
+IntValidator:::QtStyleQuick
+RegularExpressionValidator:::QtStyleQuick
+end
+
+subgraph StateControl[State control]
+direction RL
+State:::QtStyleQuick
+StateChangeScript:::QtStyleQuick
+StateGroup:::QtStyleQuick
+end
+
+subgraph CanvasStuff[Canvas]
+direction RL
+Canvas:::QtStyleQuick
+CanvasGradient:::QtStyleQuick
+CanvasImageData:::QtStyleQuick
+CanvasPixelArray:::QtStyleQuick
+end
+
+subgraph OtherStuff[Other]
+direction RL
+FontLoader:::QtStyleQuick
+Accessible:::QtStyleQuick
+AnchorChanges:::QtStyleQuick
+AnimatedImage:::QtStyleQuick
+AnimatedSprite:::QtStyleQuick
+Behavior:::QtStyleQuick
+BorderImage:::QtStyleQuick
+BorderImageMesh:::QtStyleQuick
+ColorGroup:::QtStyleQuick
+Context2D:::QtStyleQuick
+FocusScope:::QtStyleQuick
+FontMetrics:::QtStyleQuick
+Gradient:::QtStyleQuick
+GradientStop:::QtStyleQuick
+GraphicsInfo:::QtStyleQuick
+GridMesh:::QtStyleQuick
+Image:::QtStyleQuick
+ItemGrabResult:::QtStyleQuick
+Palette:::QtStyleQuick
+ParentChange:::QtStyleQuick
+PropertyChanges:::QtStyleQuick
+Rectangle:::QtStyleQuick
+Screen:::QtStyleQuick
+ShaderEffect:::QtStyleQuick
+ShaderEffectSource:::QtStyleQuick
+Sprite:::QtStyleQuick
+SpriteSequence:::QtStyleQuick
+SystemPalette:::QtStyleQuick
+Text:::QtStyleQuick
+TextMetrics:::QtStyleQuick
+Action:::QtStyleQuickControls
+ActionGroup:::QtStyleQuickControls
+Label:::QtStyleQuickControls
+SelectionRectangle:::QtStyleQuickControls
+end
+
+subgraph HelperUiElements[Helper ui elements]
+direction RL
+
+subgraph Separators[Separators]
+direction RL
+ToolSeparator:::QtStyleQuickControls
+MenuSeparator:::QtStyleQuickControls
+end
+
+subgraph WaitIndicator[Wait indicators]
+direction RL
+BusyIndicator:::QtStyleQuickControls
+ProgressBar:::QtStyleQuickControls
+end
+
+subgraph NavIndicators[Navigation indicators]
+direction RL
+ScrollBar:::QtStyleQuickControls
+ScrollIndicator:::QtStyleQuickControls
+PageIndicator:::QtStyleQuickControls
+end
+
+subgraph CalendarStuff[Calendar]
+direction RL
+Calendar:::QtStyleQuickControls
+CalendarModel:::QtStyleQuickControls
+MonthGrid:::QtStyleQuickControls
+DayOfWeekRow:::QtStyleQuickControls
+WeekNumberColumn:::QtStyleQuickControls
+end
+
+end
+
+%% Accessible --> QtObject
 AnchorAnimation --> Animation
-AnchorChanges --> QtObject
+%% AnchorChanges --> QtObject
 AnimatedImage --> Image
 AnimatedSprite --> Item
-Animation --> QtObject
-AnimationController --> QtObject
+%% Animation --> QtObject
+%% AnimationController --> QtObject
 Animator --> Animation
-Application --> QtObject
-Behavior --> QtObject
+%% Application --> QtObject
+%% Behavior --> QtObject
 BorderImage --> Item
-BorderImageMesh --> QtObject
+%% BorderImageMesh --> QtObject
 Canvas --> Item
-CanvasGradient --> QtObject
-CanvasImageData --> QtObject
-CanvasPixelArray --> QtObject
-CloseEvent --> QtObject
+%% CanvasGradient --> QtObject
+%% CanvasImageData --> QtObject
+%% CanvasPixelArray --> QtObject
+%% CloseEvent --> QtObject
 ColorAnimation --> PropertyAnimation
-ColorGroup --> QtObject
+%% ColorGroup --> QtObject
 Column --> Item
-Context2D --> QtObject
-DoubleValidator --> QDoubleValidator
-Drag --> QtObject
-DragEvent --> QtObject
+%% Context2D --> QtObject
+%% Drag --> QtObject
+%% DragEvent --> QtObject
 DragHandler --> MultiPointHandler
 DropArea --> Item
-EnterKey --> QtObject
+%% EnterKey --> QtObject
 Flickable --> Item
 Flipable --> Item
 Flow --> Item
 FocusScope --> Item
-FontLoader --> QtObject
-FontMetrics --> QtObject
-FrameAnimation --> QtObject
-GestureEvent --> QtObject
-Gradient --> ShapeGradient
-GradientStop --> QtObject
-GraphicsInfo --> QtObject
+%% FontLoader --> QtObject
+%% FontMetrics --> QtObject
+%% FrameAnimation --> QtObject
+%% GestureEvent --> QtObject
+%% GradientStop --> QtObject
+%% GraphicsInfo --> QtObject
 Grid --> Item
-GridMesh --> QtObject
+%% GridMesh --> QtObject
 GridView --> Flickable
 HoverHandler --> SinglePointHandler
 Image --> Item
-InputMethod --> QtObject
-IntValidator --> QIntValidator
-Item --> QtObject
-ItemGrabResult --> QtObject
-KeyEvent --> QtObject
-KeyNavigation --> QtObject
-Keys --> QtObject
-LayoutMirroring --> QtObject
+%% InputMethod --> QtObject
+%% Item --> QtObject
+%% ItemGrabResult --> QtObject
+%% KeyEvent --> QtObject
+%% KeyNavigation --> QtObject
+%% Keys --> QtObject
+%% LayoutMirroring --> QtObject
 ListView --> Flickable
 Loader --> Item
 Matrix4x4 --> Transform
 MouseArea --> Item
-MouseEvent --> QtObject
+%% MouseEvent --> QtObject
 MultiPointHandler --> PointerDeviceHandler
 MultiPointTouchArea --> Item
 NumberAnimation --> PropertyAnimation
 OpacityAnimator --> Animator
-Palette --> QtObject
+%% Palette --> QtObject
 ParallelAnimation --> Animation
 ParentAnimation --> Animation
-ParentChange --> QtObject
-Path --> ShapePath
-PathAngleArc --> QtObject
+%% ParentChange --> QtObject
+%% Path --> QtObject
+%% PathAngleArc --> QtObject
 PathAnimation --> Animation
-PathArc --> QtObject
-PathAttribute --> QtObject
-PathCubic --> QtObject
-PathCurve --> QtObject
-PathElement --> QtObject
-PathInterpolator --> QtObject
-PathLine --> QtObject
-PathMove --> QtObject
-PathMultiline --> QtObject
-PathPercent --> QtObject
-PathPolyline --> QtObject
-PathQuad --> QtObject
-PathSvg --> QtObject
-PathText --> QtObject
-PathView --> QtObject
+%% PathArc --> QtObject
+%% PathAttribute --> QtObject
+%% PathCubic --> QtObject
+%% PathCurve --> QtObject
+%% PathElement --> QtObject
+%% PathInterpolator --> QtObject
+%% PathLine --> QtObject
+%% PathMove --> QtObject
+%% PathMultiline --> QtObject
+%% PathPercent --> QtObject
+%% PathPolyline --> QtObject
+%% PathQuad --> QtObject
+%% PathSvg --> QtObject
+%% PathText --> QtObject
+%% PathView --> QtObject
 PauseAnimation --> Animation
 PinchArea --> Item
-PinchEvent --> QtObject
+%% PinchEvent --> QtObject
 PinchHandler --> MultiPointHandler
 PointHandler --> SinglePointHandler
-PointerDevice --> QtObject
+%% PointerDevice --> QtObject
 PointerDeviceHandler --> PointerHandler
-PointerEvent --> QtObject
-PointerHandler --> QtObject
-Positioner --> QtObject
+%% PointerEvent --> QtObject
+%% PointerHandler --> QtObject
+%% Positioner --> QtObject
 PropertyAction --> Animation
 PropertyAnimation --> Animation
-PropertyChanges --> QtObject
+%% PropertyChanges --> QtObject
 Rectangle --> Item
-RegularExpressionValidator --> QtObject
+%% RegularExpressionValidator --> QtObject
 Repeater --> Item
 Rotation --> Transform
 RotationAnimation --> PropertyAnimation
@@ -422,55 +510,55 @@ RotationAnimator --> Animator
 Row --> Item
 Scale --> Transform
 ScaleAnimator --> Animator
-Screen --> QtObject
+%% Screen --> QtObject
 ScriptAction --> Animation
 SequentialAnimation --> Animation
 ShaderEffect --> Item
 ShaderEffectSource --> Item
-Shortcut --> QtObject
+%% Shortcut --> QtObject
 SinglePointHandler --> PointerDeviceHandler
 SmoothedAnimation --> NumberAnimation
 SpringAnimation --> NumberAnimation
-Sprite --> QtObject
+%% Sprite --> QtObject
 SpriteSequence --> Item
-State --> QtObject
-StateChangeScript --> QtObject
-StateGroup --> QtObject
-SystemPalette --> QtObject
+%% State --> QtObject
+%% StateChangeScript --> QtObject
+%% StateGroup --> QtObject
+%% SystemPalette --> QtObject
 TableView --> Flickable
 TapHandler --> SinglePointHandler
 Text --> Item
 TextEdit --> Item
 TextInput --> Item
-TextMetrics --> QtObject
-TouchPoint --> QtObject
-Transform --> QtObject
-Transition --> QtObject
+%% TextMetrics --> QtObject
+%% TouchPoint --> QtObject
+%% Transform --> QtObject
+%% Transition --> QtObject
 Translate --> Transform
 TreeView --> TableView
 UniformAnimator --> Animator
 Vector3dAnimation --> PropertyAnimation
-ViewTransition --> QtObject
-WheelEvent --> QtObject
+%% ViewTransition --> QtObject
+%% WheelEvent --> QtObject
 WheelHandler --> SinglePointHandler
-Window --> QQuickWindow
-QQuickWindow --> QtObject
+%% Window --> QQuickWindow
+%% QQuickWindow --> QtObject
 XAnimator --> Animator
 YAnimator --> Animator
 
 ColumnLayout --> Item
 GridLayout --> Item
-Layout --> QtObject
+%% Layout --> QtObject
 RowLayout --> Item
 StackLayout --> Item
 
 AbstractButton --> Control
-Action --> QtObject
-ActionGroup --> QtObject
+%% Action --> QtObject
+%% ActionGroup --> QtObject
 ApplicationWindow --> Window
 BusyIndicator --> Control
 Button --> AbstractButton
-ButtonGroup --> QtObject
+%% ButtonGroup --> QtObject
 CheckBox --> AbstractButton
 CheckDelegate --> ItemDelegate
 ComboBox --> Control
@@ -481,7 +569,6 @@ DelayButton --> AbstractButton
 Dial --> Control
 Dialog --> Popup
 DialogButtonBox --> Container
-Container --> Control
 Drawer --> Popup
 Frame --> Pane
 GroupBox --> Frame
@@ -498,7 +585,7 @@ Overlay --> Item
 Page --> Pane
 PageIndicator --> Control
 Pane --> Control
-Popup --> QtObject
+%% Popup --> QtObject
 ProgressBar --> Control
 RadioButton --> AbstractButton
 RadioDelegate --> ItemDelegate
@@ -510,7 +597,7 @@ ScrollView --> Pane
 SelectionRectangle --> Control
 Slider --> Control
 SpinBox --> Control
-SplitHandle --> QtObject
+%% SplitHandle --> QtObject
 SplitView --> Container
 StackView --> Control
 SwipeDelegate --> ItemDelegate
