@@ -61,6 +61,7 @@ PauseAnimation:::QtStyleQuick
 PropertyAction:::QtStyleQuick
 SequentialAnimation:::QtStyleQuick
 ScriptAction:::QtStyleQuick
+FrameAnimation:::QtStyleQuick
 PropertyAnimation:::QtStyleQuick
 OpacityAnimator:::QtStyleQuick
 ScaleAnimator:::QtStyleQuick
@@ -81,7 +82,9 @@ Column:::QtStyleQuick
 Row:::QtStyleQuick
 Flow:::QtStyleQuick
 ColumnLayout:::QtStyleQuickLayouts
+LayoutMirroring:::QtStyleQuick
 TableView:::QtStyleQuick
+Positioner:::QtStyleQuick
 GridLayout:::QtStyleQuickLayouts
 Layout:::QtStyleQuickLayouts
 RowLayout:::QtStyleQuickLayouts
@@ -90,6 +93,7 @@ Grid:::QtStyleQuick
 GridView:::QtStyleQuick
 ListView:::QtStyleQuick
 Flickable:::QtStyleQuick
+TreeView:::QtStyleQuick
 end
 
 subgraph Input[Input methods]
@@ -100,11 +104,14 @@ DropArea:::QtStyleQuick
 EnterKey:::QtStyleQuick
 MultiPointHandler:::QtStyleQuick
 MultiPointTouchArea:::QtStyleQuick
+PointerDevice:::QtStyleQuick
 HoverHandler:::QtStyleQuick
+TouchPoint:::QtStyleQuick
 InputMethod:::QtStyleQuick
 TapHandler:::QtStyleQuick
 PinchHandler:::QtStyleQuick
 PointerHandler:::QtStyleQuick
+MouseArea:::QtStyleQuick
 KeyNavigation:::QtStyleQuick
 TextArea:::QtStyleQuickControls
 TextField:::QtStyleQuickControls
@@ -123,6 +130,16 @@ PathCubic:::QtStyleQuick
 PathCurve:::QtStyleQuick
 PathQuad:::QtStyleQuick
 PathSvg:::QtStyleQuick
+PathAttribute:::QtStyleQuick
+PathElement:::QtStyleQuick
+PathInterpolator:::QtStyleQuick
+PathMove:::QtStyleQuick
+PathMultiline:::QtStyleQuick
+PathPercent:::QtStyleQuick
+PathPolyline:::QtStyleQuick
+PathView:::QtStyleQuick
+PathAngleArc:::QtStyleQuick
+PathArc:::QtStyleQuick
 PathText:::QtStyleQuick
 PathLine:::QtStyleQuick
 Path:::QtStyleQuick
@@ -138,8 +155,10 @@ subgraph Events
 direction RL
 CloseEvent:::QtStyleQuick
 DragEvent:::QtStyleQuick
+WheelEvent:::QtStyleQuick
 GestureEvent:::QtStyleQuick
 KeyEvent:::QtStyleQuick
+MouseEvent:::QtStyleQuick
 PinchEvent:::QtStyleQuick
 PointerEvent:::QtStyleQuick
 end
@@ -149,6 +168,8 @@ direction RL
 Rotation:::QtStyleQuick
 Scale:::QtStyleQuick
 Translate:::QtStyleQuick
+Matrix4x4:::QtStyleQuick
+Transform:::QtStyleQuick
 end
 
 Accessible:::QtStyleQuick
@@ -169,7 +190,6 @@ DoubleValidator:::QtStyleQuick
 FocusScope:::QtStyleQuick
 FontLoader:::QtStyleQuick
 FontMetrics:::QtStyleQuick
-FrameAnimation:::QtStyleQuick
 Gradient:::QtStyleQuick
 GradientStop:::QtStyleQuick
 GraphicsInfo:::QtStyleQuick
@@ -178,25 +198,9 @@ Image:::QtStyleQuick
 IntValidator:::QtStyleQuick
 Item:::QtStyleQuick
 ItemGrabResult:::QtStyleQuick
-LayoutMirroring:::QtStyleQuick
 Loader:::QtStyleQuick
-Matrix4x4:::QtStyleQuick
-MouseArea:::QtStyleQuick
-MouseEvent:::QtStyleQuick
 Palette:::QtStyleQuick
 ParentChange:::QtStyleQuick
-PathAngleArc:::QtStyleQuick
-PathArc:::QtStyleQuick
-PathAttribute:::QtStyleQuick
-PathElement:::QtStyleQuick
-PathInterpolator:::QtStyleQuick
-PathMove:::QtStyleQuick
-PathMultiline:::QtStyleQuick
-PathPercent:::QtStyleQuick
-PathPolyline:::QtStyleQuick
-PathView:::QtStyleQuick
-PointerDevice:::QtStyleQuick
-Positioner:::QtStyleQuick
 PropertyChanges:::QtStyleQuick
 Rectangle:::QtStyleQuick
 RegularExpressionValidator:::QtStyleQuick
@@ -214,12 +218,8 @@ SystemPalette:::QtStyleQuick
 Text:::QtStyleQuick
 TextEdit:::QtStyleQuick
 TextMetrics:::QtStyleQuick
-TouchPoint:::QtStyleQuick
-Transform:::QtStyleQuick
 Transition:::QtStyleQuick
-TreeView:::QtStyleQuick
 ViewTransition:::QtStyleQuick
-WheelEvent:::QtStyleQuick\
 Window:::QtStyleQuick
 eventPoint:::QtStyleQuick
 handlerPoint:::QtStyleQuick
@@ -371,7 +371,7 @@ Keys --> QtObject
 LayoutMirroring --> QtObject
 ListView --> Flickable
 Loader --> Item
-Matrix4x4 --> QtObject
+Matrix4x4 --> Transform
 MouseArea --> Item
 MouseEvent --> QtObject
 MultiPointHandler --> PointerDeviceHandler
@@ -416,11 +416,11 @@ PropertyChanges --> QtObject
 Rectangle --> Item
 RegularExpressionValidator --> QtObject
 Repeater --> Item
-Rotation --> QtObject
+Rotation --> Transform
 RotationAnimation --> PropertyAnimation
 RotationAnimator --> Animator
 Row --> Item
-Scale --> QtObject
+Scale --> Transform
 ScaleAnimator --> Animator
 Screen --> QtObject
 ScriptAction --> Animation
@@ -446,7 +446,7 @@ TextMetrics --> QtObject
 TouchPoint --> QtObject
 Transform --> QtObject
 Transition --> QtObject
-Translate --> QtObject
+Translate --> Transform
 TreeView --> TableView
 UniformAnimator --> Animator
 Vector3dAnimation --> PropertyAnimation
