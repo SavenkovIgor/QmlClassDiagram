@@ -5,11 +5,11 @@ Just Qml types dependency diagram build based on Qt 6.5 documentation
 
 [Qml value types](https://doc.qt.io/qt-6/qtqml-typesystem-valuetypes.html)<br>
 
-**NODES ARE CLICKABLE! (Ctrl+Click)**
+**NODES ARE CLICKABLE! (Ctrl+Click or WheelClick)**
 
 ```mermaid
 ---
-title: QML Primitive types [To open links, use Ctrl+Click]
+title: QML Primitive types [To open links, use Ctrl+Click or WheelClick]
 ---
 graph BT
 classDef CommentStyle fill:#1e1e1e,stroke-width:0px,color:#e3e3e4;
@@ -103,11 +103,11 @@ vector4d --> QMT
 
 All this components are inplicitly nested from QtObject. This connection is omitted for the sake of diagram clarity.
 
-**NODES ARE CLICKABLE! (Ctrl+Click)**
+**NODES ARE CLICKABLE! (Ctrl+Click or WheelClick)**
 
 ```mermaid
 ---
-title: QML Type Hierarchy [To open links, use Ctrl+Click]
+title: QML Type Hierarchy [To open links, use Ctrl+Click or WheelClick]
 ---
 graph RL
 classDef CommentStyle fill:#1e1e1e,stroke-width:0px,color:#e3e3e4;
