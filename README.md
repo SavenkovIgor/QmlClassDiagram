@@ -88,6 +88,7 @@ direction RL
 Application:::QtStyleQuick
 ApplicationWindow:::QtStyleQuickControls
 Window:::QtStyleQuick
+Screen:::QtStyleQuick
 end
 
 subgraph AnimationGroup[Animation]
@@ -362,7 +363,6 @@ Palette:::QtStyleQuick
 ParentChange:::QtStyleQuick
 PropertyChanges:::QtStyleQuick
 Rectangle:::QtStyleQuick
-Screen:::QtStyleQuick
 ShaderEffect:::QtStyleQuick
 ShaderEffectSource:::QtStyleQuick
 Sprite:::QtStyleQuick
