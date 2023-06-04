@@ -5,9 +5,11 @@ Just Qml types dependency diagram build based on Qt 6.5 documentation
 
 [Qml value types](https://doc.qt.io/qt-6/qtqml-typesystem-valuetypes.html)<br>
 
+**NODES ARE CLICKABLE! (Ctrl+Click)**
+
 ```mermaid
 ---
-title: QML Primitive types
+title: QML Primitive types [To open links, use Ctrl+Click]
 ---
 graph BT
 classDef CommentStyle fill:#1e1e1e,stroke-width:0px,color:#e3e3e4;
@@ -41,18 +43,18 @@ vector2d:::QtStyle
 vector3d:::QtStyle
 vector4d:::QtStyle
 
-click        bool href "https://doc.qt.io/qt-6/qml-bool.html"
-click        date href "https://doc.qt.io/qt-6/qml-date.html"
-click      double href "https://doc.qt.io/qt-6/qml-double.html"
-click enumeration href "https://doc.qt.io/qt-6/qml-enumeration.html"
-click         int href "https://doc.qt.io/qt-6/qml-int.html"
-click        list href "https://doc.qt.io/qt-6/qml-list.html"
-click        real href "https://doc.qt.io/qt-6/qml-real.html"
-click      string href "https://doc.qt.io/qt-6/qml-string.html"
-click         url href "https://doc.qt.io/qt-6/qml-url.html"
-click         var href "https://doc.qt.io/qt-6/qml-var.html"
-click     variant href "https://doc.qt.io/qt-6/qml-variant.html"
-click        void href "https://doc.qt.io/qt-6/qml-void.html"
+click        bool href "https://doc.qt.io/qt-6/qml-bool.html" "Ctrl+Click to open"
+click        date href "https://doc.qt.io/qt-6/qml-date.html" "Ctrl+Click to open"
+click      double href "https://doc.qt.io/qt-6/qml-double.html" "Ctrl+Click to open"
+click enumeration href "https://doc.qt.io/qt-6/qml-enumeration.html" "Ctrl+Click to open"
+click         int href "https://doc.qt.io/qt-6/qml-int.html" "Ctrl+Click to open"
+click        list href "https://doc.qt.io/qt-6/qml-list.html" "Ctrl+Click to open"
+click        real href "https://doc.qt.io/qt-6/qml-real.html" "Ctrl+Click to open"
+click      string href "https://doc.qt.io/qt-6/qml-string.html" "Ctrl+Click to open"
+click         url href "https://doc.qt.io/qt-6/qml-url.html" "Ctrl+Click to open"
+click         var href "https://doc.qt.io/qt-6/qml-var.html" "Ctrl+Click to open"
+click     variant href "https://doc.qt.io/qt-6/qml-variant.html" "Ctrl+Click to open"
+click        void href "https://doc.qt.io/qt-6/qml-void.html" "Ctrl+Click to open"
 
 click      color href "https://doc.qt.io/qt-6/qml-color.html"
 click       font href "https://doc.qt.io/qt-6/qml-font.html"
@@ -101,9 +103,11 @@ vector4d --> QMT
 
 All this components are inplicitly nested from QtObject. This connection is omitted for the sake of diagram clarity.
 
+**NODES ARE CLICKABLE! (Ctrl+Click)**
+
 ```mermaid
 ---
-title: QML Type Hierarchy
+title: QML Type Hierarchy [To open links, use Ctrl+Click]
 ---
 graph RL
 classDef CommentStyle fill:#1e1e1e,stroke-width:0px,color:#e3e3e4;
