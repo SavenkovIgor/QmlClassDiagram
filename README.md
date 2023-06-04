@@ -1,9 +1,9 @@
 # QmlClassDiagram
 Just Qml types dependency diagram build based on Qt 6.5 documentation
 
+## Basic Qml types
+
 [Qml value types](https://doc.qt.io/qt-6/qtqml-typesystem-valuetypes.html)<br>
-[QML QtQuick types](https://doc.qt.io/qt-6/qtquick-qmlmodule.html)<br>
-[QML QtQuick.Controls types](https://doc.qt.io/qt-6/qtquick-controls-qmlmodule.html)
 
 ```mermaid
 ---
@@ -68,6 +68,13 @@ vector2d --> QMT
 vector3d --> QMT
 vector4d --> QMT
 ```
+
+## QtQuick & QtQuick.Controls components
+
+[QML QtQuick types](https://doc.qt.io/qt-6/qtquick-qmlmodule.html)<br>
+[QML QtQuick.Controls types](https://doc.qt.io/qt-6/qtquick-controls-qmlmodule.html)
+
+All this components are inplicitly nested from QtObject. This connection is omitted for the sake of diagram clarity.
 
 ```mermaid
 ---
