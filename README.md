@@ -41,6 +41,31 @@ vector2d:::QtStyle
 vector3d:::QtStyle
 vector4d:::QtStyle
 
+click        bool href "https://doc.qt.io/qt-6/qml-bool.html"
+click        date href "https://doc.qt.io/qt-6/qml-date.html"
+click      double href "https://doc.qt.io/qt-6/qml-double.html"
+click enumeration href "https://doc.qt.io/qt-6/qml-enumeration.html"
+click         int href "https://doc.qt.io/qt-6/qml-int.html"
+click        list href "https://doc.qt.io/qt-6/qml-list.html"
+click        real href "https://doc.qt.io/qt-6/qml-real.html"
+click      string href "https://doc.qt.io/qt-6/qml-string.html"
+click         url href "https://doc.qt.io/qt-6/qml-url.html"
+click         var href "https://doc.qt.io/qt-6/qml-var.html"
+click     variant href "https://doc.qt.io/qt-6/qml-variant.html"
+click        void href "https://doc.qt.io/qt-6/qml-void.html"
+
+click      color href "https://doc.qt.io/qt-6/qml-color.html"
+click       font href "https://doc.qt.io/qt-6/qml-font.html"
+click  matrix4x4 href "https://doc.qt.io/qt-6/qml-matrix4x4.html"
+click      point href "https://doc.qt.io/qt-6/qml-point.html"
+click quaternion href "https://doc.qt.io/qt-6/qml-quaternion.html"
+click       rect href "https://doc.qt.io/qt-6/qml-rect.html"
+click       size href "https://doc.qt.io/qt-6/qml-size.html"
+click   vector2d href "https://doc.qt.io/qt-6/qml-vector2d.html"
+click   vector3d href "https://doc.qt.io/qt-6/qml-vector3d.html"
+click   vector4d href "https://doc.qt.io/qt-6/qml-vector4d.html"
+
+
 QLT --> QVT
 QMT --> QVT
 
