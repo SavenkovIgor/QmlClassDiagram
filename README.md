@@ -1,5 +1,5 @@
 # QmlClassDiagram
-Just Qml types dependency diagram build based on Qt 6.5 documentation
+It's a Qml components dependency diagram based on Qt 6.5 documentation
 
 ## Basic Qml types
 
@@ -229,9 +229,16 @@ end
 
 subgraph Input[Input methods]
 direction RL
-DragHandler:::QtStyleQuick
+
+subgraph DragNDrop[Drag and drop]
+direction RL
 Drag:::QtStyleQuick
 DropArea:::QtStyleQuick
+DragHandler:::QtStyleQuick
+end
+
+subgraph PointHandlers[Point handlers]
+direction RL
 MultiPointTouchArea:::QtStyleQuick
 PointerDevice:::QtStyleQuick
 TouchPoint:::QtStyleQuick
@@ -247,6 +254,7 @@ HoverHandler:::QtStyleQuick
 TapHandler:::QtStyleQuick
 PointHandler:::QtStyleQuick
 WheelHandler:::QtStyleQuick
+end
 
 subgraph SpceificInput[Specific ui inputs]
 direction RL
